@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream-100 text-stone-900 font-sans antialiased;
+  }
+
+  * {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    @apply bg-gold-200 text-stone-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-stone-900 text-white px-6 py-3 text-sm font-medium tracking-wider uppercase transition-all duration-200 hover:bg-stone-700 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 border border-stone-900 text-stone-900 px-6 py-3 text-sm font-medium tracking-wider uppercase transition-all duration-200 hover:bg-stone-900 hover:text-white active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 bg-gold-400 text-stone-900 px-6 py-3 text-sm font-medium tracking-wider uppercase transition-all duration-200 hover:bg-gold-500 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .input-field {
+    @apply w-full border border-cream-400 bg-white px-4 py-3 text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-stone-900 transition-colors duration-200;
+  }
+
+  .section-title {
+    @apply font-display text-3xl md:text-4xl font-semibold text-stone-900 tracking-tight;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
